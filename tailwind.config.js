@@ -7,26 +7,27 @@ export default {
   theme: {
     extend: {
       colors: {
-        "gray-20": "#F8F4EB",
+        "gray-20": "#F5F5F5",
         "gray-50": "#EFE6E6",
         "gray-100": "#DFCCCC",
         "gray-500": "#5E0000",
-        "primary-100": "#FFE1E0", //5 primary/secondary shades, then lighter shades of those colors (smaller # = lighter)
-        "primary-300": "#FFA6A3",
-        "primary-500": "#FF6B66",
-        "secondary-400": "#FFCD58",
-        "secondary-500": "#FFC132",
+        "primary-300": "#8E8F86", //5 primary/secondary shades, then lighter shades of those colors (smaller # = lighter)
+        "primary-100": "#87A646",
+        "primary-500": "#0E5116",
+        "secondary-500": "#0F300F",
+        "secondary-100": "#06150E",
+        "dark-brown": "#402718",
       },
       backgroundImage: (theme) => ({
-        "gradient-yellowred": "linear-gradient(90deg, #FF616A 0%, #FFC837 100%)",
-        "mobile-home": "url('./assets/HomePageGraphic.png')"
+        "gradient-yellowred": "linear-gradient(90deg, #638959 0%, #FFC837 100%)",
+        "mobile-home": "url('./assets/TreeStanding.jpg')"
       }),
       fontFamily: {
         dmsans: ["DM Sans", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"]
       },
       content: {
-        evolvetext: "url('./assets/EvolveText.png')",
+        leaves: "url('./assets/Leaves.png')",
         abstractwaves: "url('./assets/AbstractWaves.png')",
         sparkles: "url('./assets/Sparkles.png')",
         circles: "url('./assets/Circles.png')",

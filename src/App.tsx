@@ -3,11 +3,8 @@ import Navbar from "./scenes/navbar";//refers to index.tsx without having to put
 import { useEffect, useState } from "react";
 import { SelectedPage } from "./shared/types";
 import Home from "./scenes/home";
-import Benefits from "./scenes/benefits";
-import OurClasses from "./scenes/ourclasses";
-import ContactPage from "./scenes/contactpage";
-import Footer from "./scenes/footer";
 
+//manages the whole page structure
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Home); //typescript inferred types can find the type for you by default, but better to be explicit
@@ -32,10 +29,6 @@ function App() {
       setSelectedPage={setSelectedPage}
     />
     <Home setSelectedPage={setSelectedPage} />
-    <Benefits setSelectedPage={setSelectedPage} />
-    <OurClasses setSelectedPage={setSelectedPage}/>
-    <ContactPage setSelectedPage={setSelectedPage}/>
-    <Footer/>
   </div>
 }
 
