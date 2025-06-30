@@ -11,9 +11,11 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
+    "bootstrap": "^5.3.7",
     "framer-motion": "^12.18.1",
     "react": "^19.1.0",
     "react-anchor-link-smooth-scroll": "^1.0.12",
+    "react-bootstrap": "^2.10.10",
     "react-dom": "^19.1.0",
     "react-hook-form": "^7.58.1"
   },

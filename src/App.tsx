@@ -3,6 +3,7 @@ import Navbar from "./scenes/navbar";//refers to index.tsx without having to put
 import { useEffect, useState } from "react";
 import { SelectedPage } from "./shared/types";
 import Home from "./scenes/home";
+import TreeImagesPage from "./scenes/treesPage";
 
 //manages the whole page structure
 
@@ -29,6 +30,7 @@ function App() {
       setSelectedPage={setSelectedPage}
     />
     <Home setSelectedPage={setSelectedPage} />
+    <TreeImagesPage setSelectedPage={setSelectedPage} />
   </div>
 }
 

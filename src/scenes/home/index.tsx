@@ -38,7 +38,7 @@ function Home({ setSelectedPage }: Props) {
                     {...motionProps}
                 > {/* -mt is positioning the heading higher */}
                     <div className="relative">{/* always set relative on parent img and absolute on child, this is the main title */}
-                        <div className="before:absolute before:-top-20 before:z-[-1] md:before:content-leaves">{/* pink bg text behind main titl, 2:05:38*/}
+                        <div className="before:absolute before:-top-20 before:z-[-1] md:before:content-leaves">
                             {/* <img alt="home-page-text" src={HomePageText} /> */}
                             <h4 className="flex font-bold font-montserrat text-[4vw]">ECOSOLUTIONS</h4> {/*text always 5% of vw */}
                         </div>
@@ -49,7 +49,7 @@ function Home({ setSelectedPage }: Props) {
                     </p>
                 </motion.div>
                 { /* Action buttons */}
-                <motion.div 
+                {/* <motion.div 
                     className="mt-8 flex items-center gap-8"
                     transition= {{delay: 0.2, duration:0.5}}
                     {...motionProps}
@@ -62,7 +62,7 @@ function Home({ setSelectedPage }: Props) {
                         >
                             <p>Learn More</p>
                         </AnchorLink>
-                    </motion.div>
+                    </motion.div> */}
                 </div>
 
             {/* Image on the right */}

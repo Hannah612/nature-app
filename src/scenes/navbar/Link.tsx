@@ -17,7 +17,7 @@ function Link({
   return (
     <AnchorLink
         className={`${selectedPage === lowerCasePage ? "text-primary-500" : ""}
-            transition duration-500 hover:text-primary-300
+            transition duration-500 hover:text-white
         `} //tailwind allows you to have smth like hover: color that allows a property to change when hovered over 
         href={`#${lowerCasePage}`}
         onClick={() => setSelectedPage(lowerCasePage)} //change state to selected page 

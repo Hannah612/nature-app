@@ -3,7 +3,6 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid" //24 = size of 
 import Logo from "@/assets/LogoEnv.png";
 import Link from "./Link";
 import { SelectedPage } from "../../shared/types";
-import useMediaQuery from "../../hooks/useMediaQuery";
 
 
 type Props = {
@@ -14,9 +13,8 @@ type Props = {
 
 const Navbar = ({isTopOfPage, selectedPage, setSelectedPage} : Props) => {
   const flexBetween = "flex items-center justify-between"; //common layout to align items left and right in navbar  
-  const isAboveMediumScreens = useMediaQuery("(min-width:1060px)"); //boolean
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
-  const navbarBackground = (isTopOfPage || isMenuToggled) ? "" : "bg-primary-100 opacity-90 z-50 rounded-b-lg";
+  const navbarBackground = isTopOfPage ? "" : "bg-primary-100 opacity-90 z-50 rounded-b-lg";
   const [isHovered, setIsHovered] = useState(false);
 
     return <nav>
@@ -42,24 +40,6 @@ const Navbar = ({isTopOfPage, selectedPage, setSelectedPage} : Props) => {
                                 <img className="w-10 z-60" src={Logo}/>
                             )}
                         </div>
-
-                    {/* Right side img */}
-                    {/* { isAboveMediumScreens ? (
-                        <div className={`${flexBetween} w-full`}> 
-                            <div className={`${flexBetween} gap-8 text-sm`}>
-                                <Link page="Home" selectedPage={selectedPage} setSelectedPage={setSelectedPage}/> 
-                            </div>
-                            <div className={`${flexBetween} gap-8`}>
-                                <p>Sign In</p>
-                                <ActionButton setSelectedPage={setSelectedPage}>Become a Member</ActionButton>
-                            </div>
-                        </div>
-                         )
-                        : (
-                            <button className="rounded-full bg-secondary-500 p-2" onClick={() => setIsMenuToggled(!isMenuToggled)}>
-                                <Bars3Icon className="h-6 w-6 text-white"/>
-                            </button>    //mobile screens 
-                        )}  */}
                 </div>
             </div>
         </div>
@@ -76,6 +56,7 @@ const Navbar = ({isTopOfPage, selectedPage, setSelectedPage} : Props) => {
                 <div className="ml-[33%] flex flex-col gap-10 text-xl"> {/*flex-col = flex vertically*/}
                     {/*links */}
                     <Link page="Home" selectedPage={selectedPage} setSelectedPage={setSelectedPage}/> 
+                    <Link page="Friendly Trees" selectedPage={selectedPage} setSelectedPage={setSelectedPage}/> 
                 </div>
             </div>
         )}

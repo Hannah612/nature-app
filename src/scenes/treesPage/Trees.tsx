@@ -1,12 +1,13 @@
 
 //this represents the side scrolling images
+//probably don't need this anymore since there's the carousel
 type Props = {
     name: string;
     description?: string;
     image: string;
 }
 
-const Class = ({name, description="default description", image}: Props) => {
+const Trees = ({name, description="default description", image}: Props) => {
     //justify-center = align horiz, item-center= align vert
   const overlayStyles = `p-5 absolute z-30 flex h-[380px] w-[450px] flex-col item-center justify-center whitespace-normal 
         bg-primary-500 text-center text-white opacity-0 transition duration-500 hover:opacity-90`;
@@ -22,4 +23,4 @@ const Class = ({name, description="default description", image}: Props) => {
   )
 }
 
-export default Class;
+export default Trees;
