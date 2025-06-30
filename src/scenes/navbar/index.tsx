@@ -4,7 +4,6 @@ import Logo from "@/assets/LogoEnv.png";
 import Link from "./Link";
 import { SelectedPage } from "../../shared/types";
 import useMediaQuery from "../../hooks/useMediaQuery";
-import ActionButton from "../../shared/ActionButton";
 
 
 type Props = {
@@ -65,7 +64,7 @@ const Navbar = ({isTopOfPage, selectedPage, setSelectedPage} : Props) => {
             </div>
         </div>
         {/* Mobile menu modal */}
-        {!isAboveMediumScreens && isMenuToggled && (
+        {isMenuToggled && (
             <div className="fixed right-0 bottom-0 z-40 h-full w-[300px] bg-primary-100 drop-shadow-xl">
                 { /* Close icon in modal */}
                 <div className="flex justify-end p-12">
