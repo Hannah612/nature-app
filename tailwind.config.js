@@ -9,7 +9,7 @@ export default {
       colors: {
         "gray-20": "#F5F5F5",
         "gray-50": "#EFE6E6",
-        "gray-100": "#DFCCCC",
+        "gray-100": "#EDE8D0",
         "gray-500": "#5E0000",
         "primary-300": "#8E8F86", //5 primary/secondary shades, then lighter shades of those colors (smaller # = lighter)
         "primary-100": "#87A646",

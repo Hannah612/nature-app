@@ -5,8 +5,10 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { useState } from 'react';
 import CarouselCaptioning from './CarouselCaptioning';
 
+//for the trees page, but you could make this so an image can be passed in, if necessary
+
 function CarouselFade() {
-  const [isHovered, setIsHovered] = useState(false); //if image ishovered, then show caption, else hide caption 
+  const [isHovered, setIsHovered] = useState(false); 
 
   return (
     <Carousel fade className='basis-3/5'>

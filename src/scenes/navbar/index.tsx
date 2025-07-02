@@ -3,7 +3,6 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid" //24 = size of 
 import Logo from "@/assets/LogoEnv.png";
 import Link from "./Link";
 import { SelectedPage } from "../../shared/types";
-import ActionButton from "../../shared/ActionButton";
 import useMediaQuery from "../../hooks/useMediaQuery";
 
 
@@ -21,7 +20,7 @@ const Navbar = ({isTopOfPage, selectedPage, setSelectedPage} : Props) => {
   const isAboveMediumScreens = useMediaQuery("(min-width:1060px)"); //bool to see is it mobile or web
 
     return <nav>
-        <div //45:00 in video
+        <div 
             className={`${navbarBackground} ${flexBetween} fixed top-0 z-50 w-full py-6`} //flexBetween spaces all the nav bar elements correctly, fixed sticky top navbar
         >
             <div className={`${flexBetween} mx-auto w-5/6`}> 
