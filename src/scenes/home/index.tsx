@@ -1,8 +1,6 @@
 import useMediaQuery from "../../hooks/useMediaQuery";
-import ActionButton from "../../shared/ActionButton";
 import { SelectedPage } from "../../shared/types"
 import TreeStanding  from '@/assets/TreeStanding.jpg'
-import AnchorLink from "react-anchor-link-smooth-scroll";
 import { motion } from "framer-motion"; //animation to move text from left to right on load
 
 type Props = {
@@ -48,21 +46,6 @@ function Home({ setSelectedPage }: Props) {
                         Lorem ipsum (/ˌl.rəm p.səm/ LOR-əm IP-səm) is a dummy or placeholder text commonly used in graphic design, publishing, and web development. Its purpose is to permit a page layout to be designed, independently of the copy that will subsequently populate it, or to demonstrate various fonts of a typeface without meaningful text that could be distracting.
                     </p>
                 </motion.div>
-                { /* Action buttons */}
-                {/* <motion.div 
-                    className="mt-8 flex items-center gap-8"
-                    transition= {{delay: 0.2, duration:0.5}}
-                    {...motionProps}
-                >
-                        <ActionButton setSelectedPage={setSelectedPage}> Join Now </ActionButton>
-                        <AnchorLink //link goes to somewhere on the same page 
-                            className="text-sm font-bold text-primary-500 underline hover:text-secondary-500"
-                            onClick={() => setSelectedPage(SelectedPage.ContactUs)}
-                            href={`#${SelectedPage.ContactUs}`}
-                        >
-                            <p>Learn More</p>
-                        </AnchorLink>
-                    </motion.div> */}
                 </div>
 
             {/* Image on the right */}

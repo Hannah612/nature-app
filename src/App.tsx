@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { SelectedPage } from "./shared/types";
 import Home from "./scenes/home";
 import TreeImagesPage from "./scenes/treesPage";
+import NatureSupporters from "./scenes/naturePage";
 
 //manages the whole page structure
 
@@ -31,6 +32,7 @@ function App() {
     />
     <Home setSelectedPage={setSelectedPage} />
     <TreeImagesPage setSelectedPage={setSelectedPage} />
+    <NatureSupporters setSelectedPage={setSelectedPage} />
   </div>
 }
 

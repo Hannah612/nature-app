@@ -3,6 +3,7 @@ import type { JSX } from "react";
 export enum SelectedPage {
   Home = "home",
   Trees = "friendlytrees",
+  NaturePage = "naturalsupporters",
 }
 
 export interface BenefitType {

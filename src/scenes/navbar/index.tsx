@@ -3,6 +3,8 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid" //24 = size of 
 import Logo from "@/assets/LogoEnv.png";
 import Link from "./Link";
 import { SelectedPage } from "../../shared/types";
+import ActionButton from "../../shared/ActionButton";
+import useMediaQuery from "../../hooks/useMediaQuery";
 
 
 type Props = {
@@ -16,6 +18,7 @@ const Navbar = ({isTopOfPage, selectedPage, setSelectedPage} : Props) => {
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
   const navbarBackground = isTopOfPage ? "" : "bg-primary-100 opacity-90 z-50 rounded-b-lg";
   const [isHovered, setIsHovered] = useState(false);
+  const isAboveMediumScreens = useMediaQuery("(min-width:1060px)"); //bool to see is it mobile or web
 
     return <nav>
         <div //45:00 in video
@@ -40,6 +43,18 @@ const Navbar = ({isTopOfPage, selectedPage, setSelectedPage} : Props) => {
                                 <img className="w-10 z-60" src={Logo}/>
                             )}
                         </div>
+
+                        { isAboveMediumScreens ? (
+                            <div className={`${flexBetween} w-full`}> {/*div for the button */}
+                                <div className={`${flexBetween} gap-8 text-sm`}> {/*gap = gap between each element*/}
+                                    {/*links */}
+                                    <Link page="Home" selectedPage={selectedPage} setSelectedPage={setSelectedPage}/> 
+                                    <Link page="Friendly Trees" selectedPage={selectedPage} setSelectedPage={setSelectedPage}/>
+                                    <Link page="Natural Supporters" selectedPage={selectedPage} setSelectedPage={setSelectedPage}/>
+                                </div>
+                            </div>
+                         )
+                        : ""}
                 </div>
             </div>
         </div>
@@ -57,6 +72,7 @@ const Navbar = ({isTopOfPage, selectedPage, setSelectedPage} : Props) => {
                     {/*links */}
                     <Link page="Home" selectedPage={selectedPage} setSelectedPage={setSelectedPage}/> 
                     <Link page="Friendly Trees" selectedPage={selectedPage} setSelectedPage={setSelectedPage}/> 
+                    <Link page="Natural Supporters" selectedPage={selectedPage} setSelectedPage={setSelectedPage}/> 
                 </div>
             </div>
         )}
