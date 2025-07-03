@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { SelectedPage } from "../../shared/types";
+import { motionProps, SelectedPage } from "../../shared/types";
 import HText from "../../shared/HText";
 import { useForm } from "react-hook-form";
 import TreeUp from "../../assets/TreeUp.jpg"
@@ -10,6 +10,7 @@ type Props = {
 
 
 const ContactUs = ({setSelectedPage}: Props) => {
+   const grayText = `text-gray-100`;
    const inputStyles = `mb-1 w-full rounded-lg bg-primary-300 px-5 py-3 placeholder:secondary-100`
     //provided by react form
     const {
@@ -35,14 +36,7 @@ const ContactUs = ({setSelectedPage}: Props) => {
       >
             <motion.div 
                 className="mx-auto bg-white bg-opacity-50 rounded-md w-5/6"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{once:true, amount:0.5}} //amount = amount you need to see for animation to trigger 
-                transition={{duration:0.5}}
-                variants={{
-                    hidden:{opacity:0, x:-50}, //initial state
-                    visible: {opacity:1, x:0}, //while in view state
-                }}
+                {...motionProps}
             >
           </motion.div>
             <HText><span className="flex mx-auto w-5/6 text-gray-50">CONTACT US</span></HText>
@@ -50,10 +44,7 @@ const ContactUs = ({setSelectedPage}: Props) => {
             <div className="justify-between gap-8 flex-col md:flex"> 
                   <motion.div
                     className="basis-3/5 md:mt-0 w-5/6 mx-auto  md:flex"
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{once:true, amount:0.5}} //amount = amount you need to see for animation to trigger 
-                    transition={{duration:0.5}}
+                    {...motionProps}
                     variants={{
                         hidden:{opacity:0, y:50}, //animates upwards
                         visible: {opacity:1, y:0},  
@@ -75,7 +66,7 @@ const ContactUs = ({setSelectedPage}: Props) => {
                           })}
                       />
                       {errors.name && (
-                          <p className="text-primary-500">
+                          <p className={grayText}>
                               {errors.name.type === "required" && "This field is required."}
                               {errors.name.type === "maxLength" && "Max length is 100 char."}
                           </p>
@@ -90,7 +81,7 @@ const ContactUs = ({setSelectedPage}: Props) => {
                           })}
                       />
                       {errors.email && (
-                          <p className="text-primary-500">
+                          <p className={grayText}>
                               {errors.email.type === "required" && "This field is required."}
                               {errors.email.type === "pattern" && "Invalid email address."}
                           </p>
@@ -106,7 +97,7 @@ const ContactUs = ({setSelectedPage}: Props) => {
                           })}
                       />
                       {errors.message && (
-                          <p className="text-primary-500">
+                          <p className={grayText}>
                               {errors.message.type === "required" && "This field is required."}
                               {errors.message.type === "maxLength" && "Max length is 2000 char."}
                           </p>
@@ -126,8 +117,6 @@ const ContactUs = ({setSelectedPage}: Props) => {
                     />
                   </div>
              </motion.div>
-
-
           </div>
       </motion.div>
     </section>
