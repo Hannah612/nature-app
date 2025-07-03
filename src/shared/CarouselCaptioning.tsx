@@ -1,8 +1,7 @@
 //Captioning for carousel, depending on if on mobile of desktop webpage 
 
-import { useState } from "react";
-import useMediaQuery from "../hooks/useMediaQuery";
 import { Carousel } from "react-bootstrap";
+import useMediaQuery from "../hooks/useMediaQuery";
 
 type Props = {
     children: React.ReactNode;
