@@ -11,7 +11,7 @@ const NatureSupporters = ({setSelectedPage}: Props) => {
   const tab = `inline-block ml-10`;
   return <section
         id="naturalsupporters"
-        className="gap-16 bg-gray-100 py-10 md:h-full md:pb-0" //md:h-full = media query only when it's above medium screen 
+        className="gap-16 bg-gray-100 md:py-28 py-24 md:h-full md:pb-0" //md:h-full = media query only when it's above medium screen 
     >
 
         <motion.div 
@@ -31,7 +31,7 @@ const NatureSupporters = ({setSelectedPage}: Props) => {
                     visible: {opacity:1, x:0}, //while in view state
                 }}
             >
-                <div className="px-2 pt-2 max-h-56"> {/* max-h has predefined values in typescipt, must use those*/}
+                <div className="px-2 pt-2 max-h-96"> {/* max-h has predefined values in typescipt, must use those*/}
                     <p>
                         <span className={tab}></span>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                     </p>

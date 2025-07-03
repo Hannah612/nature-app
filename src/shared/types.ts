@@ -4,6 +4,7 @@ export enum SelectedPage {
   Home = "home",
   Trees = "friendlytrees",
   NaturePage = "naturalsupporters",
+  ContactUs = "contactus",
 }
 
 export interface BenefitType {

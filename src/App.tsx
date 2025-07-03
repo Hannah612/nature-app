@@ -1,10 +1,11 @@
 //https://www.youtube.com/watch?app=desktop&v=I2NNxr3WPDo&t=0s
-import Navbar from "./scenes/navbar";//refers to index.tsx without having to put it in the path
+import Navbar from "./scenes/navbar/Navbar";//refers to index.tsx without having to put it in the path
 import { useEffect, useState } from "react";
 import { SelectedPage } from "./shared/types";
-import Home from "./scenes/home";
-import TreeImagesPage from "./scenes/treesPage";
-import NatureSupporters from "./scenes/naturePage";
+import Home from "./scenes/home/Home";
+import TreeImagesPage from "./scenes/treesPage/TreeImagesPage";
+import NatureSupporters from "./scenes/naturePage/NatureSupporters";
+import ContactUs from "./scenes/contactPage/ContactUs";
 
 //manages the whole page structure
 
@@ -33,6 +34,7 @@ function App() {
     <Home setSelectedPage={setSelectedPage} />
     <TreeImagesPage setSelectedPage={setSelectedPage} />
     <NatureSupporters setSelectedPage={setSelectedPage} />
+    <ContactUs setSelectedPage={setSelectedPage} />
   </div>
 }
 
